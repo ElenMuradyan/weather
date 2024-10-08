@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A simple weather app template to search for city weather information.">
+    <meta name="keywords" content="weather, city, temperature, forecast">
+    <meta name="author" content="">
+    <meta http-equiv="Content-Language" content="en">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>CSS-HTML template</title>
+</head>
+<body>
+    <main>
+    <div id="loading"><i class="fas fa-spinner fa-spin"></i></div>
+<section>
+    <div id="search"><input type='text' id='searchinput' placeholder='Enter a city name...'/><button id="searchbutton" aria-label="Search" type="submit">
+        <i class="fa fa-search" aria-hidden="true"></i>
+    </button></div>
+    <div id="city" lang="en"><i class="fas fa-map-marker-alt"></i><p id="cityp" lang="en"></p>
+    <span>City</span>
+    </div>
+    <div id="country"><p id="countryp"></p>
+    <span>Country</span>
+    </div>
+    <div id="temperature"><i class="fas fa-thermometer-full"></i>
+    <i id="moon"></i>
+    <p id="temperaturep"></p>
+    <img src="" id="icon"></img>
+    <span>Temperature</span>
+    </div>
+    <br/>
+</section>
+    </main>
+<script src="index.js"></script>
+</body>
+</html>
