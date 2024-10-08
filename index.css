@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding:0;
+    font-family:Gill Sans, sans-serif;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    background-color: rgb(240, 248, 255);
+}
+main>section{
+    display: grid;
+    width: 60%;
+    height: 70vh;
+    gap:5px;
+    grid-template-columns: repeat(2, 1fr); 
+    grid-template-rows: 0.2fr 0.35fr 0.35fr; 
+    grid-template-areas: 
+    "search search"
+    "city country"
+    "temperature temperature"; 
+}
+#search{
+    grid-area: search;
+    background-color: coral;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#search>input{
+    font-size: 25px;
+    padding:5px;
+    border: none;
+    width: 70%;
+    height: 50%;
+    border-radius: 3px;
+}
+#searchbutton{
+    cursor: pointer;
+    height: 60%;
+    width: 60px;
+    background-color: rgba(240, 248, 255, 0);
+    font-size: 25px;
+    border:none;
+    color:white
+}
+#searchbutton:hover{
+    background-color: rgba(240, 248, 255, 0.451);
+}
+#search>input:focus{
+outline: none;
+}
+#temperature>i , #city>i{
+    font-size:18px;
+    opacity: 0.8;
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+span{
+    position: absolute;
+    opacity: 0.8;
+    bottom:10px;
+    left:10px;
+}
+#icon{
+    display: none;
+    position: absolute;
+    top: 10px;;
+    right:10px;
+    transition: 1s;
+    width: 50px;
+    padding: 5px;
+    height: 50px; 
+}
+#icon:hover{
+    width: 60px;
+    height: 60px;
+    padding: 0;
+}
+#temperature{
+    grid-area:temperature;
+}
+#city,#country,#temperature{
+    background-color: rgb(255, 255, 255);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#countryp, #cityp, #temperaturep{
+    font-size:25px
+}
+#loading{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    z-index: 15;
+    background-color: rgba(255, 255, 255, 0.307);
+}
+@media (max-width:602px) {
+    main>section{
+        width: 90%;
+        grid-template-columns: 1fr; 
+        grid-template-rows: 0.1fr 0.3fr 0.3fr 0.3fr; 
+        grid-template-areas: 
+        "search"
+        "city"
+        "country"
+        "temperature"; 
+    }
+}
